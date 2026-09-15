@@ -1,0 +1,1462 @@
+
+
+
+
+
+
+
+
+command
+
+https://aistudio.google.com/app/prompts/1UdkgzJR15IKXtN12PVrKeZ1TmPPJ2m2x
+
+
+
+
+
+
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> (Get-History).CommandLine
+$sqlcmd = "C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\SQLCMD.EXE"
+& $sqlcmd -S localhost -E -d Northwind -Q @"
+IF NOT EXISTS (SELECT 1 FROM sysobjects WHERE name='BookChunks' and xtype='U')
+BEGIN
+    CREATE TABLE BookChunks (
+        Id INT IDENTITY(1,1) PRIMARY KEY,
+        PageNumber INT,
+        ChunkText NVARCHAR(MAX),
+        Embedding NVARCHAR(MAX)
+    );
+    CREATE FULLTEXT CATALOG BookCatalog AS DEFAULT;
+    CREATE FULLTEXT INDEX ON BookChunks(ChunkText) KEY INDEX PK__BookChun__3214EC07...; -- اختياري
+END
+"@
+pip install pypdf pyodbc
+notebade ingest_book.py
+notepade ingest_book.py
+python ingest_book.py
+pip install ollama
+python ingest_book.py
+& "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" -m pip install ollama pypdf pyodbc
+& "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+cd C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet
+& "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+& "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+ollama list
+ollama run Qwen3.8-27B-64k:latest
+& "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet>
+
+
+
+
+
+
+
+
+
+
+
+ERROR: You must give at least one requirement to install (see "pip help install")
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> pip list
+Package              Version   Editable project location
+-------------------- --------- -------------------------------------------------------
+annotated-types      0.8.0
+anthropic            1.5.0
+anyio                4.15.1
+certifi              2026.7.22
+cffi                 2.1.1
+charset-normalizer   3.5.1
+cryptography         50.0.1
+distro               1.9.0
+docstring_parser     0.18.0
+h11                  0.16.0
+httpcore             1.0.9
+httpcore2            2.13.0
+httpx                0.28.1
+httpx2               2.13.0
+idna                 3.19
+jiter                0.17.0
+jsonpatch            1.33
+jsonpointer          3.1.1
+langchain-anthropic  1.7.2
+langchain-core       1.6.3
+langchain-ollama     1.1.0
+langchain-openai     1.6.2
+langchain-protocol   0.0.19
+langgraph            1.2.11
+langgraph-checkpoint 4.2.0
+langgraph-prebuilt   1.1.0
+langgraph-sdk        0.4.4
+langsmith            0.12.4
+not-devin            0.1.0     C:\Users\Aytto\OneDrive\Desktop\not\not-devin\not-devin
+ollama               0.6.2
+openai               3.13.0
+orjson               3.12.0
+ormsgpack            1.12.2
+packaging            26.3
+pip                  25.0.1
+pycparser            3.0
+pydantic             2.13.5
+pydantic_core        2.46.5
+PyJWT                2.14.0
+pyodbc               5.3.0
+pypdf                6.18.1
+python-dotenv        1.2.3
+PyYAML               6.0.3
+regex                2026.9.10
+requests             2.34.2
+requests-toolbelt    1.0.0
+sniffio              1.3.1
+tenacity             9.1.4
+tiktoken             0.14.0
+truststore           0.10.4
+typing_extensions    4.16.0
+typing-inspection    0.4.4
+urllib3              2.7.0
+uuid_utils           0.17.1
+websockets           16.1.1
+xxhash               4.0.1
+zstandard            0.25.0
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> history
+
+  Id CommandLine
+  -- -----------
+   1 cd C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet
+   2 & "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+   3 Start-Process ollama -ArgumentList "serve"
+   4 Start-Process ollama -ArgumentList "serve"
+   5 & "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+   6 notepad ingest_book.py
+   7 & "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+   8 @"...
+   9 # تشغيل السكريبت المحدث
+  10 & "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+  11 & "C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\SQLCMD.EXE" -S localhost -E -d Northwin...
+  12 & "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+  13 # 1. إنشاء ملف أداة البحث في الكتاب BookTools.cs
+  14 @"...
+  15 # 2. تحديث مصنع الوكيل OllamaAgentFactory.cs ليعتمد على الكتاب
+  16 @"...
+  17 # 3. تحديث ملف DependencyInjection.cs لتسجيل BookTools
+  18 @"...
+  19 # 4. بناء المشروع للتأكد من خلوه من أي أخطاء
+  20 $env:DOTNET_ROLL_FORWARD="Major"
+  21 dotnet build
+  22 dotnet run --project Northwind.Api
+  23 pip install
+  24 pip list
+
+
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> (Get-History).CommandLine
+cd C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet
+& "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+Start-Process ollama -ArgumentList "serve"
+Start-Process ollama -ArgumentList "serve"
+& "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+notepad ingest_book.py
+& "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+@"
+import json
+import pyodbc
+from pypdf import PdfReader
+import requests
+
+PDF_PATH = r"1.pdf"
+
+# تجاوز أي بروكسي أو VPN في الويندوز للاتصال المحلي
+session = requests.Session()
+session.trust_env = False
+
+# 1. فحص الاتصال بـ Ollama
+try:
+    res = session.get("http://127.0.0.1:11434", timeout=5)
+    print("🟢 خادم Ollama متصل ويعمل بنجاح:", res.text.strip())
+except Exception as e:
+    print(f"🔴 تعذر الاتصال بـ Ollama: {e}")
+    exit(1)
+
+# 2. الاتصال بـ SQL Server والتأكد من وجود الجدول
+try:
+    conn = pyodbc.connect(
+        "DRIVER={ODBC Driver 17 for SQL Server};"
+        "SERVER=localhost;"
+        "DATABASE=Northwind;"
+        "Trusted_Connection=yes;"
+    )
+    cursor = conn.cursor()
+    cursor.execute("""
+        IF NOT EXISTS (SELECT 1 FROM sysobjects WHERE name='BookChunks' AND xtype='U')
+        CREATE TABLE BookChunks (
+            Id INT IDENTITY(1,1) PRIMARY KEY,
+            PageNumber INT,
+            ChunkText NVARCHAR(MAX),
+            Embedding NVARCHAR(MAX)
+        );
+    """)
+    conn.commit()
+    print("🟢 تم الاتصال بقاعدة البيانات والتحقق من جدول BookChunks بنجاح!")
+except Exception as e:
+    print(f"🔴 خطأ في قاعدة البيانات: {e}")
+    exit(1)
+
+print(f"📖 جاري قراءة وتحليل الكتاب: {PDF_PATH}")
+reader = PdfReader(PDF_PATH)
+print(f"📄 إجمالي عدد الصفحات: {len(reader.pages)}")
+
+chunk_size = 700
+overlap = 100
+total_chunks = 0
+
+for page_idx, page in enumerate(reader.pages):
+    text = page.extract_text()
+    if not text or not text.strip():
+        continue
+
+    start = 0
+    while start < len(text):
+        chunk = text[start:start + chunk_size].strip()
+        if len(chunk) > 50:
+            try:
+                resp = session.post(
+                    "http://127.0.0.1:11434/api/embeddings",
+                    json={"model": "mxbai-embed:latest", "prompt": chunk},
+                    timeout=30
+                )
+                if resp.status_code == 200:
+                    emb = resp.json()["embedding"]
+                    cursor.execute("""
+                        INSERT INTO BookChunks (PageNumber, ChunkText, Embedding)
+                        VALUES (?, ?, ?)
+                    """, (page_idx + 1, chunk, json.dumps(emb)))
+                    total_chunks += 1
+                else:
+                    print(f"⚠️ تنبيه صفحة {page_idx + 1}: {resp.text}")
+            except Exception as ex:
+                print(f"⚠️ خطأ في فقرة: {ex}")
+
+        start += chunk_size - overlap
+
+    conn.commit()
+    print(f"✅ تم حفظ الصفحة {page_idx + 1} من {len(reader.pages)}")
+
+cursor.close()
+conn.close()
+print(f"\n🎉 مبروك! تم إدخال الكتاب بالكامل في قاعدة البيانات بنجاح بإجمالي {total_chunks} فقرة!")
+"@ | Set-Content "ingest_book.py" -Encoding UTF8
+# تشغيل السكريبت المحدث
+& "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+& "C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\SQLCMD.EXE" -S localhost -E -d Northwind -Q "CREATE TABLE BookChunks (Id INT IDENTITY(1,1) PRIMARY KEY, PageNumber INT, ChunkText NVARCHAR(MAX), Embedding NVARCHAR(MAX));"
+& "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+# 1. إنشاء ملف أداة البحث في الكتاب BookTools.cs
+@"
+using System.ComponentModel;
+using System.Net.Http.Json;
+using System.Text.Json;
+using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+
+namespace Northwind.Infrastructure.AI.Tools;
+
+public sealed class BookTools(IConfiguration configuration)
+{
+    private readonly string _connectionString = configuration.GetConnectionString("Northwind")!;
+    private static readonly HttpClient _httpClient = new();
+
+    [Description("البحث في نصوص وفقرات الكتاب للإجابة على أسئلة المستخدم.")]
+    public async Task<string> SearchBookAsync(
+        [Description("نص السؤال أو كلمات البحث عن موضوع محدد داخل الكتاب")] string query,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            // 1. توليد الـ Vector لسؤال المستخدم عبر Ollama محلياً
+            var embedReq = new { model = "mxbai-embed:latest", prompt = query };
+            using var httpResp = await _httpClient.PostAsJsonAsync("http://localhost:11434/api/embeddings", embedReq, cancellationToken);
+            httpResp.EnsureSuccessStatusCode();
+
+            using var jsonDoc = await JsonDocument.ParseAsync(await httpResp.Content.ReadAsStreamAsync(cancellationToken), cancellationToken: cancellationToken);
+            var queryVector = jsonDoc.RootElement.GetProperty("embedding")
+                .EnumerateArray()
+                .Select(x => x.GetSingle())
+                .ToArray();
+
+            // 2. جلب فقرات الكتاب من قاعدة البيانات وحساب التشابه الدلالي (Cosine Similarity)
+            using var conn = new SqlConnection(_connectionString);
+            await conn.OpenAsync(cancellationToken);
+
+            using var cmd = new SqlCommand("SELECT PageNumber, ChunkText, Embedding FROM BookChunks", conn);
+            using var reader = await cmd.ExecuteReaderAsync(cancellationToken);
+
+            var scoredChunks = new List<(int Page, string Text, float Score)>();
+
+            while (await reader.ReadAsync(cancellationToken))
+            {
+                int page = reader.GetInt32(0);
+                string text = reader.GetString(1);
+                string embJson = reader.GetString(2);
+
+                var chunkVec = JsonSerializer.Deserialize<float[]>(embJson);
+                if (chunkVec != null)
+                {
+                    float score = CosineSimilarity(queryVector, chunkVec);
+                    scoredChunks.Add((page, text, score));
+                }
+            }
+
+            if (scoredChunks.Count == 0)
+                return "لم يتم العثور على أي معلومات داخل الكتاب.";
+
+            // 3. أخذ أفضل 3 فقرات متطابقة دلالياً مع السؤال
+            var topChunks = scoredChunks
+                .OrderByDescending(c => c.Score)
+                .Take(3)
+                .Select(c => $"[من الصفحة {c.Page}]:\n{c.Text}");
+
+            return string.Join("\n\n---\n\n", topChunks);
+        }
+        catch (Exception ex)
+        {
+            return $"خطأ أثناء البحث في الكتاب: {ex.Message}";
+        }
+    }
+
+    private static float CosineSimilarity(float[] v1, float[] v2)
+    {
+        if (v1.Length != v2.Length) return 0f;
+        float dot = 0f, mag1 = 0f, mag2 = 0f;
+        for (int i = 0; i < v1.Length; i++)
+        {
+            dot += v1[i] * v2[i];
+            mag1 += v1[i] * v1[i];
+            mag2 += v2[i] * v2[i];
+        }
+        float mag = MathF.Sqrt(mag1) * MathF.Sqrt(mag2);
+        return mag == 0f ? 0f : dot / mag;
+    }
+}
+"@ | Set-Content "Northwind.Infrastructure\AI\Tools\BookTools.cs" -Encoding UTF8
+# 2. تحديث مصنع الوكيل OllamaAgentFactory.cs ليعتمد على الكتاب
+@"
+using Microsoft.Agents.AI;
+using Microsoft.Extensions.AI;
+using Northwind.Infrastructure.AI.Tools;
+using OllamaSharp;
+
+namespace Northwind.Infrastructure.AI.Agents.Ollama
+{
+    public sealed class OllamaAgentFactory(BookTools bookTools)
+    {
+        public AIAgent CreateCustomerSupportAgent()
+        {
+            var endpoint = Environment.GetEnvironmentVariable("OLLAMA_ENDPOINT") ?? "http://localhost:11434";
+            var modelName = Environment.GetEnvironmentVariable("OLLAMA_MODEL_NAME") ?? "Qwen3.8-27B-64k:latest";
+
+            var client = new OllamaApiClient(new Uri(endpoint), modelName);
+
+            var agent = client.AsAIAgent(
+                name: "BookAssistantAgent",
+                description: "وكيل ذكي مخصص للإجابة عن أسئلة محتوى الكتاب والملفات المرفوعة بدقة.",
+                instructions:
+                    """
+                    أنت مساعد وخبير ذكي في محتوى الكتاب المرفوع.
+                    مهمتك الإجابة على أسئلة واستفسارات المستخدم بناءً على محتوى الكتاب فقط.
+
+                    القواعد:
+                    1. استخدم دائماً أداة SearchBookAsync للبحث في محتوى الكتاب قبل أن تجيب.
+                    2. لا تخترع أي معلومات غير موجودة في نتائج البحث.
+                    3. اذكر رقم الصفحة إن وجد في نتيجة البحث لتوثيق الإجابة.
+                    4. أجب بنفس لغة سؤال المستخدم (عربي أو إنجليزي).
+                    """,
+                tools:
+                [
+                    AIFunctionFactory.Create(bookTools.SearchBookAsync)
+                ]);
+
+            return agent;
+        }
+    }
+}
+"@ | Set-Content "Northwind.Infrastructure\AI\Agents\Ollama\OllamaAgentFactory.cs" -Encoding UTF8
+# 3. تحديث ملف DependencyInjection.cs لتسجيل BookTools
+@"
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.AI;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Northwind.Application.AI.Agents;
+using Northwind.Application.Data;
+using Northwind.Domain.Orders;
+using Northwind.Infrastructure.AI.Agents.Ollama;
+using Northwind.Infrastructure.AI.Tools;
+using Northwind.Infrastructure.Data;
+using Northwind.Infrastructure.Orders;
+
+namespace Northwind.Infrastructure
+{
+    public static class DependencyInjection
+    {
+        public static IServiceCollection AddInfrastructure(
+            this IServiceCollection services,
+            IConfiguration configuration)
+        {
+            services.AddDbContext<NorthwindDbContext>(options =>
+                options.UseSqlServer(
+                    configuration.GetConnectionString("Northwind")));
+
+            services.AddScoped<IApplicationDbContext>(
+                provider =>
+                    provider.GetRequiredService<NorthwindDbContext>());
+
+            services.AddScoped<IOrderRepository, OrderRepository>();
+
+            services.AddScoped<OrderTools>();
+            services.AddScoped<BookTools>();
+
+            services.AddScoped<OllamaAgentFactory>();
+            services.AddScoped<ICustomerSupportAgent, OllamaCustomerSupportAgent>();
+
+            return services;
+        }
+    }
+}
+"@ | Set-Content "Northwind.Infrastructure\DependencyInjection.cs" -Encoding UTF8
+# 4. بناء المشروع للتأكد من خلوه من أي أخطاء
+$env:DOTNET_ROLL_FORWARD="Major"
+dotnet build
+dotnet run --project Northwind.Api
+pip install
+pip list
+history
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> (Get-Histor
+
+
+
+
+
+
+
+
+
+PS C:\Users\Aytto> (Get-History).CommandLine
+Invoke-RestMethod -Method Post -Uri "http://localhost:5159/api/support/ask?message=ما هي النقاط الرئيسية المذكورة في الكتاب؟"
+PS C:\Users\Aytto>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> $sqlcmd = "C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\SQLCMD.EXE"
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet>
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> & $sqlcmd -S localhost -E -d Northwind -Q @"
+>> IF NOT EXISTS (SELECT 1 FROM sysobjects WHERE name='BookChunks' and xtype='U')
+>> BEGIN
+>>     CREATE TABLE BookChunks (
+>>         Id INT IDENTITY(1,1) PRIMARY KEY,
+>>         PageNumber INT,
+>>         ChunkText NVARCHAR(MAX),
+>>         Embedding NVARCHAR(MAX)
+>>     );
+>>     CREATE FULLTEXT CATALOG BookCatalog AS DEFAULT;
+>>     CREATE FULLTEXT INDEX ON BookChunks(ChunkText) KEY INDEX PK__BookChun__3214EC07...; -- اختياري
+>> END
+>> "@
+Msg 102, Level 15, State 1, Server m, Line 10
+Incorrect syntax near '.'.
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> pip install pypdf pyodbc
+Collecting pypdf
+  Using cached pypdf-6.18.1-py3-none-any.whl.metadata (7.5 kB)
+Collecting pyodbc
+  Downloading pyodbc-5.3.0-cp312-cp312-win_amd64.whl.metadata (2.8 kB)
+Using cached pypdf-6.18.1-py3-none-any.whl (394 kB)
+Downloading pyodbc-5.3.0-cp312-cp312-win_amd64.whl (70 kB)
+Installing collected packages: pypdf, pyodbc
+Successfully installed pyodbc-5.3.0 pypdf-6.18.1
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe -m pip install --upgrade pip
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> notebade ingest_book.py
+notebade : The term 'notebade' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ notebade ingest_book.py
++ ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (notebade:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> notepade ingest_book.py
+notepade : The term 'notepade' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ notepade ingest_book.py
++ ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (notepade:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> python ingest_book.py
+Traceback (most recent call last):
+  File "C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet\ingest_book.py", line 2, in <module>
+    import ollama
+ModuleNotFoundError: No module named 'ollama'
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> pip install ollama
+Requirement already satisfied: ollama in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (0.6.2)
+Requirement already satisfied: httpx>=0.27 in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (from ollama) (0.28.1)
+Requirement already satisfied: pydantic>=2.9 in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (from ollama) (2.13.5)
+Requirement already satisfied: anyio in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (from httpx>=0.27->ollama) (4.15.1)
+Requirement already satisfied: certifi in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (from httpx>=0.27->ollama) (2026.7.22)
+Requirement already satisfied: httpcore==1.* in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (from httpx>=0.27->ollama) (1.0.9)
+Requirement already satisfied: idna in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (from httpx>=0.27->ollama) (3.19)
+Requirement already satisfied: h11>=0.16 in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (from httpcore==1.*->httpx>=0.27->ollama) (0.16.0)
+Requirement already satisfied: annotated-types>=0.6.0 in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (from pydantic>=2.9->ollama) (0.8.0)
+Requirement already satisfied: pydantic-core==2.46.5 in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (from pydantic>=2.9->ollama) (2.46.5)
+Requirement already satisfied: typing-extensions>=4.14.1 in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (from pydantic>=2.9->ollama) (4.16.0)
+Requirement already satisfied: typing-inspection>=0.4.2 in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (from pydantic>=2.9->ollama) (0.4.4)
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe -m pip install --upgrade pip
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> python ingest_book.py
+Traceback (most recent call last):
+  File "C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet\ingest_book.py", line 2, in <module>
+    import ollama
+ModuleNotFoundError: No module named 'ollama'
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> & "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" -m pip install ollama pypdf pyodbc
+Requirement already satisfied: ollama in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (0.6.2)
+Requirement already satisfied: pypdf in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (6.18.1)
+Requirement already satisfied: pyodbc in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (5.3.0)
+Requirement already satisfied: httpx>=0.27 in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (from ollama) (0.28.1)
+Requirement already satisfied: pydantic>=2.9 in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (from ollama) (2.13.5)
+Requirement already satisfied: anyio in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (from httpx>=0.27->ollama) (4.15.1)
+Requirement already satisfied: certifi in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (from httpx>=0.27->ollama) (2026.7.22)
+Requirement already satisfied: httpcore==1.* in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (from httpx>=0.27->ollama) (1.0.9)
+Requirement already satisfied: idna in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (from httpx>=0.27->ollama) (3.19)
+Requirement already satisfied: h11>=0.16 in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (from httpcore==1.*->httpx>=0.27->ollama) (0.16.0)
+Requirement already satisfied: annotated-types>=0.6.0 in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (from pydantic>=2.9->ollama) (0.8.0)
+Requirement already satisfied: pydantic-core==2.46.5 in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (from pydantic>=2.9->ollama) (2.46.5)
+Requirement already satisfied: typing-extensions>=4.14.1 in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (from pydantic>=2.9->ollama) (4.16.0)
+Requirement already satisfied: typing-inspection>=0.4.2 in c:\users\aytto\appdata\local\programs\python\python312\lib\site-packages (from pydantic>=2.9->ollama) (0.4.4)
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe -m pip install --upgrade pip
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> & "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+📖 جاري قراءة الكتاب: C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet\1.pdf
+Traceback (most recent call last):
+  File "C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet\ingest_book.py", line 35, in <module>
+    embed_resp = ollama.embeddings(
+                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\Lib\site-packages\ollama\_client.py", line 439, in embeddings
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\Lib\site-packages\ollama\_client.py", line 199, in _request
+    return cls(**self._request_raw(*args, **kwargs).json())
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\Lib\site-packages\ollama\_client.py", line 145, in _request_raw
+    raise ConnectionError(CONNECTION_ERROR_MESSAGE) from None
+ConnectionError: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> cd C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> & "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+📖 جاري قراءة الكتاب: C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet\1.pdf
+Traceback (most recent call last):
+  File "C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet\ingest_book.py", line 35, in <module>
+    embed_resp = ollama.embeddings(
+                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\Lib\site-packages\ollama\_client.py", line 439, in embeddings
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\Lib\site-packages\ollama\_client.py", line 199, in _request
+    return cls(**self._request_raw(*args, **kwargs).json())
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\Lib\site-packages\ollama\_client.py", line 145, in _request_raw
+    raise ConnectionError(CONNECTION_ERROR_MESSAGE) from None
+ConnectionError: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> & "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+📖 جاري قراءة الكتاب: C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet\1.pdf
+Traceback (most recent call last):
+  File "C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet\ingest_book.py", line 35, in <module>
+    embed_resp = ollama.embeddings(
+                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\Lib\site-packages\ollama\_client.py", line 439, in embeddings
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\Lib\site-packages\ollama\_client.py", line 199, in _request
+    return cls(**self._request_raw(*args, **kwargs).json())
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\Lib\site-packages\ollama\_client.py", line 145, in _request_raw
+    raise ConnectionError(CONNECTION_ERROR_MESSAGE) from None
+ConnectionError: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> ollama list
+NAME                                    ID              SIZE      MODIFIED
+Qwen3.8-27B-64k:latest                  d3aff8af0357    13 GB     3 days ago
+Qwen3.8-27B-GSQ-RCO-IQ3_S-mtp:latest    359344b9ad85    13 GB     6 days ago
+qwen3:0.6b                              7df6b6e09427    522 MB    11 days ago
+mxbai-embed:latest                      468836162de7    669 MB    2 weeks ago
+translategemma:12b                      c2f9a9ca1ec7    8.1 GB    6 months ago
+qwen3.5:27b                             193ec05b1e80    17 GB     6 months ago
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> ollama run Qwen3.8-27B-64k:latest
+>>> /bye
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> & "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+📖 جاري قراءة الكتاب: C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet\1.pdf
+Traceback (most recent call last):
+  File "C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet\ingest_book.py", line 35, in <module>
+    embed_resp = ollama.embeddings(
+                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\Lib\site-packages\ollama\_client.py", line 439, in embeddings
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\Lib\site-packages\ollama\_client.py", line 199, in _request
+    return cls(**self._request_raw(*args, **kwargs).json())
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\Lib\site-packages\ollama\_client.py", line 145, in _request_raw
+    raise ConnectionError(CONNECTION_ERROR_MESSAGE) from None
+ConnectionError: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> (Get-History).CommandLine
+$sqlcmd = "C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\SQLCMD.EXE"
+& $sqlcmd -S localhost -E -d Northwind -Q @"
+IF NOT EXISTS (SELECT 1 FROM sysobjects WHERE name='BookChunks' and xtype='U')
+BEGIN
+    CREATE TABLE BookChunks (
+        Id INT IDENTITY(1,1) PRIMARY KEY,
+        PageNumber INT,
+        ChunkText NVARCHAR(MAX),
+        Embedding NVARCHAR(MAX)
+    );
+    CREATE FULLTEXT CATALOG BookCatalog AS DEFAULT;
+    CREATE FULLTEXT INDEX ON BookChunks(ChunkText) KEY INDEX PK__BookChun__3214EC07...; -- اختياري
+END
+"@
+pip install pypdf pyodbc
+notebade ingest_book.py
+notepade ingest_book.py
+python ingest_book.py
+pip install ollama
+python ingest_book.py
+& "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" -m pip install ollama pypdf pyodbc
+& "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+cd C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet
+& "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+& "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+ollama list
+ollama run Qwen3.8-27B-64k:latest
+& "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet>
+
+
+
+
+
+
+
+
+
+
+
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\Aytto> cd C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> & "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+📖 جاري قراءة الكتاب: C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet\1.pdf
+Traceback (most recent call last):
+  File "C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet\ingest_book.py", line 35, in <module>
+    embed_resp = ollama.embeddings(
+                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\Lib\site-packages\ollama\_client.py", line 439, in embeddings
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\Lib\site-packages\ollama\_client.py", line 199, in _request
+    return cls(**self._request_raw(*args, **kwargs).json())
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\Lib\site-packages\ollama\_client.py", line 145, in _request_raw
+    raise ConnectionError(CONNECTION_ERROR_MESSAGE) from None
+ConnectionError: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> Start-Process ollama -ArgumentList "serve"
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> Start-Process ollama -ArgumentList "serve"
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> & "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+📖 جاري قراءة الكتاب: C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet\1.pdf
+Traceback (most recent call last):
+  File "C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet\ingest_book.py", line 35, in <module>
+    embed_resp = ollama.embeddings(
+                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\Lib\site-packages\ollama\_client.py", line 439, in embeddings
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\Lib\site-packages\ollama\_client.py", line 199, in _request
+    return cls(**self._request_raw(*args, **kwargs).json())
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\Lib\site-packages\ollama\_client.py", line 145, in _request_raw
+    raise ConnectionError(CONNECTION_ERROR_MESSAGE) from None
+ConnectionError: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> notepad ingest_book.py
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> & "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+🟢 خادم Ollama متصل ويعمل بنجاح!
+📖 جاري قراءة الكتاب: C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet\1.pdf
+📄 إجمالي عدد الصفحات: 1
+Traceback (most recent call last):
+  File "C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet\ingest_book.py", line 54, in <module>
+    cursor.execute(
+pyodbc.ProgrammingError: ('42S02', "[42S02] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid object name 'BookChunks'. (208) (SQLExecDirectW); [42S02] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> @"
+>> import json
+>> import pyodbc
+>> from pypdf import PdfReader
+>> import requests
+>>
+>> PDF_PATH = r"1.pdf"
+>>
+>> # تجاوز أي بروكسي أو VPN في الويندوز للاتصال المحلي
+>> session = requests.Session()
+>> session.trust_env = False
+>>
+>> # 1. فحص الاتصال بـ Ollama
+>> try:
+>>     res = session.get("http://127.0.0.1:11434", timeout=5)
+>>     print("🟢 خادم Ollama متصل ويعمل بنجاح:", res.text.strip())
+>> except Exception as e:
+>>     print(f"🔴 تعذر الاتصال بـ Ollama: {e}")
+>>     exit(1)
+>>
+>> # 2. الاتصال بـ SQL Server والتأكد من وجود الجدول
+>> try:
+>>     conn = pyodbc.connect(
+>>         "DRIVER={ODBC Driver 17 for SQL Server};"
+>>         "SERVER=localhost;"
+>>         "DATABASE=Northwind;"
+>>         "Trusted_Connection=yes;"
+>>     )
+>>     cursor = conn.cursor()
+>>     cursor.execute("""
+>>         IF NOT EXISTS (SELECT 1 FROM sysobjects WHERE name='BookChunks' AND xtype='U')
+>>         CREATE TABLE BookChunks (
+>>             Id INT IDENTITY(1,1) PRIMARY KEY,
+>>             PageNumber INT,
+>>             ChunkText NVARCHAR(MAX),
+>>             Embedding NVARCHAR(MAX)
+>>         );
+>>     """)
+>>     conn.commit()
+>>     print("🟢 تم الاتصال بقاعدة البيانات والتحقق من جدول BookChunks بنجاح!")
+>> except Exception as e:
+>>     print(f"🔴 خطأ في قاعدة البيانات: {e}")
+>>     exit(1)
+>>
+>> print(f"📖 جاري قراءة وتحليل الكتاب: {PDF_PATH}")
+>> reader = PdfReader(PDF_PATH)
+>> print(f"📄 إجمالي عدد الصفحات: {len(reader.pages)}")
+>>
+>> chunk_size = 700
+>> overlap = 100
+>> total_chunks = 0
+>>
+>> for page_idx, page in enumerate(reader.pages):
+>>     text = page.extract_text()
+>>     if not text or not text.strip():
+>>         continue
+>>
+>>     start = 0
+>>     while start < len(text):
+>>         chunk = text[start:start + chunk_size].strip()
+>>         if len(chunk) > 50:
+>>             try:
+>>                 resp = session.post(
+>>                     "http://127.0.0.1:11434/api/embeddings",
+>>                     json={"model": "mxbai-embed:latest", "prompt": chunk},
+>>                     timeout=30
+>>                 )
+>>                 if resp.status_code == 200:
+>>                     emb = resp.json()["embedding"]
+>>                     cursor.execute("""
+>>                         INSERT INTO BookChunks (PageNumber, ChunkText, Embedding)
+>>                         VALUES (?, ?, ?)
+>>                     """, (page_idx + 1, chunk, json.dumps(emb)))
+>>                     total_chunks += 1
+>>                 else:
+>>                     print(f"⚠️ تنبيه صفحة {page_idx + 1}: {resp.text}")
+>>             except Exception as ex:
+>>                 print(f"⚠️ خطأ في فقرة: {ex}")
+>>
+>>         start += chunk_size - overlap
+>>
+>>     conn.commit()
+>>     print(f"✅ تم حفظ الصفحة {page_idx + 1} من {len(reader.pages)}")
+>>
+>> cursor.close()
+>> conn.close()
+>> print(f"\n🎉 مبروك! تم إدخال الكتاب بالكامل في قاعدة البيانات بنجاح بإجمالي {total_chunks} فقرة!")
+>> "@ | Set-Content "ingest_book.py" -Encoding UTF8
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet>
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> # تشغيل السكريبت المحدث
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> & "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+🟢 خادم Ollama متصل ويعمل بنجاح: Ollama is running
+🟢 تم الاتصال بقاعدة البيانات والتحقق من جدول BookChunks بنجاح!
+📖 جاري قراءة وتحليل الكتاب: 1.pdf
+📄 إجمالي عدد الصفحات: 1
+✅ تم حفظ الصفحة 1 من 1
+
+🎉 مبروك! تم إدخال الكتاب بالكامل في قاعدة البيانات بنجاح بإجمالي 5 فقرة!
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> & "C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\SQLCMD.EXE" -S localhost -E -d Northwind -Q "CREATE TABLE BookChunks (Id INT IDENTITY(1,1) PRIMARY KEY, PageNumber INT, ChunkText NVARCHAR(MAX), Embedding NVARCHAR(MAX));"
+Msg 2714, Level 16, State 6, Server m, Line 1
+There is already an object named 'BookChunks' in the database.
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> & "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+🟢 خادم Ollama متصل ويعمل بنجاح: Ollama is running
+🟢 تم الاتصال بقاعدة البيانات والتحقق من جدول BookChunks بنجاح!
+📖 جاري قراءة وتحليل الكتاب: 1.pdf
+📄 إجمالي عدد الصفحات: 1
+✅ تم حفظ الصفحة 1 من 1
+
+🎉 مبروك! تم إدخال الكتاب بالكامل في قاعدة البيانات بنجاح بإجمالي 5 فقرة!
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> # 1. إنشاء ملف أداة البحث في الكتاب BookTools.cs
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> @"
+>> using System.ComponentModel;
+>> using System.Net.Http.Json;
+>> using System.Text.Json;
+>> using Microsoft.Data.SqlClient;
+>> using Microsoft.Extensions.Configuration;
+>>
+>> namespace Northwind.Infrastructure.AI.Tools;
+>>
+>> public sealed class BookTools(IConfiguration configuration)
+>> {
+>>     private readonly string _connectionString = configuration.GetConnectionString("Northwind")!;
+>>     private static readonly HttpClient _httpClient = new();
+>>
+>>     [Description("البحث في نصوص وفقرات الكتاب للإجابة على أسئلة المستخدم.")]
+>>     public async Task<string> SearchBookAsync(
+>>         [Description("نص السؤال أو كلمات البحث عن موضوع محدد داخل الكتاب")] string query,
+>>         CancellationToken cancellationToken = default)
+>>     {
+>>         try
+>>         {
+>>             // 1. توليد الـ Vector لسؤال المستخدم عبر Ollama محلياً
+>>             var embedReq = new { model = "mxbai-embed:latest", prompt = query };
+>>             using var httpResp = await _httpClient.PostAsJsonAsync("http://localhost:11434/api/embeddings", embedReq, cancellationToken);
+>>             httpResp.EnsureSuccessStatusCode();
+>>
+>>             using var jsonDoc = await JsonDocument.ParseAsync(await httpResp.Content.ReadAsStreamAsync(cancellationToken), cancellationToken: cancellationToken);
+>>             var queryVector = jsonDoc.RootElement.GetProperty("embedding")
+>>                 .EnumerateArray()
+>>                 .Select(x => x.GetSingle())
+>>                 .ToArray();
+>>
+>>             // 2. جلب فقرات الكتاب من قاعدة البيانات وحساب التشابه الدلالي (Cosine Similarity)
+>>             using var conn = new SqlConnection(_connectionString);
+>>             await conn.OpenAsync(cancellationToken);
+>>
+>>             using var cmd = new SqlCommand("SELECT PageNumber, ChunkText, Embedding FROM BookChunks", conn);
+>>             using var reader = await cmd.ExecuteReaderAsync(cancellationToken);
+>>
+>>             var scoredChunks = new List<(int Page, string Text, float Score)>();
+>>
+>>             while (await reader.ReadAsync(cancellationToken))
+>>             {
+>>                 int page = reader.GetInt32(0);
+>>                 string text = reader.GetString(1);
+>>                 string embJson = reader.GetString(2);
+>>
+>>                 var chunkVec = JsonSerializer.Deserialize<float[]>(embJson);
+>>                 if (chunkVec != null)
+>>                 {
+>>                     float score = CosineSimilarity(queryVector, chunkVec);
+>>                     scoredChunks.Add((page, text, score));
+>>                 }
+>>             }
+>>
+>>             if (scoredChunks.Count == 0)
+>>                 return "لم يتم العثور على أي معلومات داخل الكتاب.";
+>>
+>>             // 3. أخذ أفضل 3 فقرات متطابقة دلالياً مع السؤال
+>>             var topChunks = scoredChunks
+>>                 .OrderByDescending(c => c.Score)
+>>                 .Take(3)
+>>                 .Select(c => $"[من الصفحة {c.Page}]:\n{c.Text}");
+>>
+>>             return string.Join("\n\n---\n\n", topChunks);
+>>         }
+>>         catch (Exception ex)
+>>         {
+>>             return $"خطأ أثناء البحث في الكتاب: {ex.Message}";
+>>         }
+>>     }
+>>
+>>     private static float CosineSimilarity(float[] v1, float[] v2)
+>>     {
+>>         if (v1.Length != v2.Length) return 0f;
+>>         float dot = 0f, mag1 = 0f, mag2 = 0f;
+>>         for (int i = 0; i < v1.Length; i++)
+>>         {
+>>             dot += v1[i] * v2[i];
+>>             mag1 += v1[i] * v1[i];
+>>             mag2 += v2[i] * v2[i];
+>>         }
+>>         float mag = MathF.Sqrt(mag1) * MathF.Sqrt(mag2);
+>>         return mag == 0f ? 0f : dot / mag;
+>>     }
+>> }
+>> "@ | Set-Content "Northwind.Infrastructure\AI\Tools\BookTools.cs" -Encoding UTF8
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet>
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> # 2. تحديث مصنع الوكيل OllamaAgentFactory.cs ليعتمد على الكتاب
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> @"
+>> using Microsoft.Agents.AI;
+>> using Microsoft.Extensions.AI;
+>> using Northwind.Infrastructure.AI.Tools;
+>> using OllamaSharp;
+>>
+>> namespace Northwind.Infrastructure.AI.Agents.Ollama
+>> {
+>>     public sealed class OllamaAgentFactory(BookTools bookTools)
+>>     {
+>>         public AIAgent CreateCustomerSupportAgent()
+>>         {
+>>             var endpoint = Environment.GetEnvironmentVariable("OLLAMA_ENDPOINT") ?? "http://localhost:11434";
+>>             var modelName = Environment.GetEnvironmentVariable("OLLAMA_MODEL_NAME") ?? "Qwen3.8-27B-64k:latest";
+>>
+>>             var client = new OllamaApiClient(new Uri(endpoint), modelName);
+>>
+>>             var agent = client.AsAIAgent(
+>>                 name: "BookAssistantAgent",
+>>                 description: "وكيل ذكي مخصص للإجابة عن أسئلة محتوى الكتاب والملفات المرفوعة بدقة.",
+>>                 instructions:
+>>                     """
+>>                     أنت مساعد وخبير ذكي في محتوى الكتاب المرفوع.
+>>                     مهمتك الإجابة على أسئلة واستفسارات المستخدم بناءً على محتوى الكتاب فقط.
+>>
+>>                     القواعد:
+>>                     1. استخدم دائماً أداة SearchBookAsync للبحث في محتوى الكتاب قبل أن تجيب.
+>>                     2. لا تخترع أي معلومات غير موجودة في نتائج البحث.
+>>                     3. اذكر رقم الصفحة إن وجد في نتيجة البحث لتوثيق الإجابة.
+>>                     4. أجب بنفس لغة سؤال المستخدم (عربي أو إنجليزي).
+>>                     """,
+>>                 tools:
+>>                 [
+>>                     AIFunctionFactory.Create(bookTools.SearchBookAsync)
+>>                 ]);
+>>
+>>             return agent;
+>>         }
+>>     }
+>> }
+>> "@ | Set-Content "Northwind.Infrastructure\AI\Agents\Ollama\OllamaAgentFactory.cs" -Encoding UTF8
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet>
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> # 3. تحديث ملف DependencyInjection.cs لتسجيل BookTools
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> @"
+>> using Microsoft.EntityFrameworkCore;
+>> using Microsoft.Extensions.AI;
+>> using Microsoft.Extensions.Configuration;
+>> using Microsoft.Extensions.DependencyInjection;
+>> using Northwind.Application.AI.Agents;
+>> using Northwind.Application.Data;
+>> using Northwind.Domain.Orders;
+>> using Northwind.Infrastructure.AI.Agents.Ollama;
+>> using Northwind.Infrastructure.AI.Tools;
+>> using Northwind.Infrastructure.Data;
+>> using Northwind.Infrastructure.Orders;
+>>
+>> namespace Northwind.Infrastructure
+>> {
+>>     public static class DependencyInjection
+>>     {
+>>         public static IServiceCollection AddInfrastructure(
+>>             this IServiceCollection services,
+>>             IConfiguration configuration)
+>>         {
+>>             services.AddDbContext<NorthwindDbContext>(options =>
+>>                 options.UseSqlServer(
+>>                     configuration.GetConnectionString("Northwind")));
+>>
+>>             services.AddScoped<IApplicationDbContext>(
+>>                 provider =>
+>>                     provider.GetRequiredService<NorthwindDbContext>());
+>>
+>>             services.AddScoped<IOrderRepository, OrderRepository>();
+>>
+>>             services.AddScoped<OrderTools>();
+>>             services.AddScoped<BookTools>();
+>>
+>>             services.AddScoped<OllamaAgentFactory>();
+>>             services.AddScoped<ICustomerSupportAgent, OllamaCustomerSupportAgent>();
+>>
+>>             return services;
+>>         }
+>>     }
+>> }
+>> "@ | Set-Content "Northwind.Infrastructure\DependencyInjection.cs" -Encoding UTF8
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet>
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> # 4. بناء المشروع للتأكد من خلوه من أي أخطاء
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> $env:DOTNET_ROLL_FORWARD="Major"
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> dotnet build
+Restore complete (0.5s)
+    info NETSDK1057: You are using a preview version of .NET. See: https://aka.ms/dotnet-support-policy
+  Northwind.Domain net10.0 succeeded (0.1s) → Northwind.Domain\bin\Debug\net10.0\Northwind.Domain.dll
+  Northwind.Application net10.0 succeeded (0.1s) → Northwind.Application\bin\Debug\net10.0\Northwind.Application.dll
+  Northwind.Infrastructure net10.0 succeeded (1.2s) → Northwind.Infrastructure\bin\Debug\net10.0\Northwind.Infrastructure.dll
+  Northwind.Api net10.0 succeeded (0.6s) → Northwind.Api\bin\Debug\net10.0\Northwind.Api.dll
+
+Build succeeded in 2.7s
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> dotnet run --project Northwind.Api
+Using launch settings from Northwind.Api\Properties\launchSettings.json...
+Building...
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5159
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet\Northwind.Api
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> ^C
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> ^C
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> pip install
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe -m pip install --upgrade pip
+ERROR: You must give at least one requirement to install (see "pip help install")
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> pip list
+Package              Version   Editable project location
+-------------------- --------- -------------------------------------------------------
+annotated-types      0.8.0
+anthropic            1.5.0
+anyio                4.15.1
+certifi              2026.7.22
+cffi                 2.1.1
+charset-normalizer   3.5.1
+cryptography         50.0.1
+distro               1.9.0
+docstring_parser     0.18.0
+h11                  0.16.0
+httpcore             1.0.9
+httpcore2            2.13.0
+httpx                0.28.1
+httpx2               2.13.0
+idna                 3.19
+jiter                0.17.0
+jsonpatch            1.33
+jsonpointer          3.1.1
+langchain-anthropic  1.7.2
+langchain-core       1.6.3
+langchain-ollama     1.1.0
+langchain-openai     1.6.2
+langchain-protocol   0.0.19
+langgraph            1.2.11
+langgraph-checkpoint 4.2.0
+langgraph-prebuilt   1.1.0
+langgraph-sdk        0.4.4
+langsmith            0.12.4
+not-devin            0.1.0     C:\Users\Aytto\OneDrive\Desktop\not\not-devin\not-devin
+ollama               0.6.2
+openai               3.13.0
+orjson               3.12.0
+ormsgpack            1.12.2
+packaging            26.3
+pip                  25.0.1
+pycparser            3.0
+pydantic             2.13.5
+pydantic_core        2.46.5
+PyJWT                2.14.0
+pyodbc               5.3.0
+pypdf                6.18.1
+python-dotenv        1.2.3
+PyYAML               6.0.3
+regex                2026.9.10
+requests             2.34.2
+requests-toolbelt    1.0.0
+sniffio              1.3.1
+tenacity             9.1.4
+tiktoken             0.14.0
+truststore           0.10.4
+typing_extensions    4.16.0
+typing-inspection    0.4.4
+urllib3              2.7.0
+uuid_utils           0.17.1
+websockets           16.1.1
+xxhash               4.0.1
+zstandard            0.25.0
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> history
+
+  Id CommandLine
+  -- -----------
+   1 cd C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet
+   2 & "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+   3 Start-Process ollama -ArgumentList "serve"
+   4 Start-Process ollama -ArgumentList "serve"
+   5 & "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+   6 notepad ingest_book.py
+   7 & "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+   8 @"...
+   9 # تشغيل السكريبت المحدث
+  10 & "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+  11 & "C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\SQLCMD.EXE" -S localhost -E -d Northwin...
+  12 & "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+  13 # 1. إنشاء ملف أداة البحث في الكتاب BookTools.cs
+  14 @"...
+  15 # 2. تحديث مصنع الوكيل OllamaAgentFactory.cs ليعتمد على الكتاب
+  16 @"...
+  17 # 3. تحديث ملف DependencyInjection.cs لتسجيل BookTools
+  18 @"...
+  19 # 4. بناء المشروع للتأكد من خلوه من أي أخطاء
+  20 $env:DOTNET_ROLL_FORWARD="Major"
+  21 dotnet build
+  22 dotnet run --project Northwind.Api
+  23 pip install
+  24 pip list
+
+
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> (Get-History).CommandLine
+cd C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet
+& "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+Start-Process ollama -ArgumentList "serve"
+Start-Process ollama -ArgumentList "serve"
+& "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+notepad ingest_book.py
+& "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+@"
+import json
+import pyodbc
+from pypdf import PdfReader
+import requests
+
+PDF_PATH = r"1.pdf"
+
+# تجاوز أي بروكسي أو VPN في الويندوز للاتصال المحلي
+session = requests.Session()
+session.trust_env = False
+
+# 1. فحص الاتصال بـ Ollama
+try:
+    res = session.get("http://127.0.0.1:11434", timeout=5)
+    print("🟢 خادم Ollama متصل ويعمل بنجاح:", res.text.strip())
+except Exception as e:
+    print(f"🔴 تعذر الاتصال بـ Ollama: {e}")
+    exit(1)
+
+# 2. الاتصال بـ SQL Server والتأكد من وجود الجدول
+try:
+    conn = pyodbc.connect(
+        "DRIVER={ODBC Driver 17 for SQL Server};"
+        "SERVER=localhost;"
+        "DATABASE=Northwind;"
+        "Trusted_Connection=yes;"
+    )
+    cursor = conn.cursor()
+    cursor.execute("""
+        IF NOT EXISTS (SELECT 1 FROM sysobjects WHERE name='BookChunks' AND xtype='U')
+        CREATE TABLE BookChunks (
+            Id INT IDENTITY(1,1) PRIMARY KEY,
+            PageNumber INT,
+            ChunkText NVARCHAR(MAX),
+            Embedding NVARCHAR(MAX)
+        );
+    """)
+    conn.commit()
+    print("🟢 تم الاتصال بقاعدة البيانات والتحقق من جدول BookChunks بنجاح!")
+except Exception as e:
+    print(f"🔴 خطأ في قاعدة البيانات: {e}")
+    exit(1)
+
+print(f"📖 جاري قراءة وتحليل الكتاب: {PDF_PATH}")
+reader = PdfReader(PDF_PATH)
+print(f"📄 إجمالي عدد الصفحات: {len(reader.pages)}")
+
+chunk_size = 700
+overlap = 100
+total_chunks = 0
+
+for page_idx, page in enumerate(reader.pages):
+    text = page.extract_text()
+    if not text or not text.strip():
+        continue
+
+    start = 0
+    while start < len(text):
+        chunk = text[start:start + chunk_size].strip()
+        if len(chunk) > 50:
+            try:
+                resp = session.post(
+                    "http://127.0.0.1:11434/api/embeddings",
+                    json={"model": "mxbai-embed:latest", "prompt": chunk},
+                    timeout=30
+                )
+                if resp.status_code == 200:
+                    emb = resp.json()["embedding"]
+                    cursor.execute("""
+                        INSERT INTO BookChunks (PageNumber, ChunkText, Embedding)
+                        VALUES (?, ?, ?)
+                    """, (page_idx + 1, chunk, json.dumps(emb)))
+                    total_chunks += 1
+                else:
+                    print(f"⚠️ تنبيه صفحة {page_idx + 1}: {resp.text}")
+            except Exception as ex:
+                print(f"⚠️ خطأ في فقرة: {ex}")
+
+        start += chunk_size - overlap
+
+    conn.commit()
+    print(f"✅ تم حفظ الصفحة {page_idx + 1} من {len(reader.pages)}")
+
+cursor.close()
+conn.close()
+print(f"\n🎉 مبروك! تم إدخال الكتاب بالكامل في قاعدة البيانات بنجاح بإجمالي {total_chunks} فقرة!")
+"@ | Set-Content "ingest_book.py" -Encoding UTF8
+# تشغيل السكريبت المحدث
+& "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+& "C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\SQLCMD.EXE" -S localhost -E -d Northwind -Q "CREATE TABLE BookChunks (Id INT IDENTITY(1,1) PRIMARY KEY, PageNumber INT, ChunkText NVARCHAR(MAX), Embedding NVARCHAR(MAX));"
+& "C:\Users\Aytto\AppData\Local\Programs\Python\Python312\python.exe" ingest_book.py
+# 1. إنشاء ملف أداة البحث في الكتاب BookTools.cs
+@"
+using System.ComponentModel;
+using System.Net.Http.Json;
+using System.Text.Json;
+using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+
+namespace Northwind.Infrastructure.AI.Tools;
+
+public sealed class BookTools(IConfiguration configuration)
+{
+    private readonly string _connectionString = configuration.GetConnectionString("Northwind")!;
+    private static readonly HttpClient _httpClient = new();
+
+    [Description("البحث في نصوص وفقرات الكتاب للإجابة على أسئلة المستخدم.")]
+    public async Task<string> SearchBookAsync(
+        [Description("نص السؤال أو كلمات البحث عن موضوع محدد داخل الكتاب")] string query,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            // 1. توليد الـ Vector لسؤال المستخدم عبر Ollama محلياً
+            var embedReq = new { model = "mxbai-embed:latest", prompt = query };
+            using var httpResp = await _httpClient.PostAsJsonAsync("http://localhost:11434/api/embeddings", embedReq, cancellationToken);
+            httpResp.EnsureSuccessStatusCode();
+
+            using var jsonDoc = await JsonDocument.ParseAsync(await httpResp.Content.ReadAsStreamAsync(cancellationToken), cancellationToken: cancellationToken);
+            var queryVector = jsonDoc.RootElement.GetProperty("embedding")
+                .EnumerateArray()
+                .Select(x => x.GetSingle())
+                .ToArray();
+
+            // 2. جلب فقرات الكتاب من قاعدة البيانات وحساب التشابه الدلالي (Cosine Similarity)
+            using var conn = new SqlConnection(_connectionString);
+            await conn.OpenAsync(cancellationToken);
+
+            using var cmd = new SqlCommand("SELECT PageNumber, ChunkText, Embedding FROM BookChunks", conn);
+            using var reader = await cmd.ExecuteReaderAsync(cancellationToken);
+
+            var scoredChunks = new List<(int Page, string Text, float Score)>();
+
+            while (await reader.ReadAsync(cancellationToken))
+            {
+                int page = reader.GetInt32(0);
+                string text = reader.GetString(1);
+                string embJson = reader.GetString(2);
+
+                var chunkVec = JsonSerializer.Deserialize<float[]>(embJson);
+                if (chunkVec != null)
+                {
+                    float score = CosineSimilarity(queryVector, chunkVec);
+                    scoredChunks.Add((page, text, score));
+                }
+            }
+
+            if (scoredChunks.Count == 0)
+                return "لم يتم العثور على أي معلومات داخل الكتاب.";
+
+            // 3. أخذ أفضل 3 فقرات متطابقة دلالياً مع السؤال
+            var topChunks = scoredChunks
+                .OrderByDescending(c => c.Score)
+                .Take(3)
+                .Select(c => $"[من الصفحة {c.Page}]:\n{c.Text}");
+
+            return string.Join("\n\n---\n\n", topChunks);
+        }
+        catch (Exception ex)
+        {
+            return $"خطأ أثناء البحث في الكتاب: {ex.Message}";
+        }
+    }
+
+    private static float CosineSimilarity(float[] v1, float[] v2)
+    {
+        if (v1.Length != v2.Length) return 0f;
+        float dot = 0f, mag1 = 0f, mag2 = 0f;
+        for (int i = 0; i < v1.Length; i++)
+        {
+            dot += v1[i] * v2[i];
+            mag1 += v1[i] * v1[i];
+            mag2 += v2[i] * v2[i];
+        }
+        float mag = MathF.Sqrt(mag1) * MathF.Sqrt(mag2);
+        return mag == 0f ? 0f : dot / mag;
+    }
+}
+"@ | Set-Content "Northwind.Infrastructure\AI\Tools\BookTools.cs" -Encoding UTF8
+# 2. تحديث مصنع الوكيل OllamaAgentFactory.cs ليعتمد على الكتاب
+@"
+using Microsoft.Agents.AI;
+using Microsoft.Extensions.AI;
+using Northwind.Infrastructure.AI.Tools;
+using OllamaSharp;
+
+namespace Northwind.Infrastructure.AI.Agents.Ollama
+{
+    public sealed class OllamaAgentFactory(BookTools bookTools)
+    {
+        public AIAgent CreateCustomerSupportAgent()
+        {
+            var endpoint = Environment.GetEnvironmentVariable("OLLAMA_ENDPOINT") ?? "http://localhost:11434";
+            var modelName = Environment.GetEnvironmentVariable("OLLAMA_MODEL_NAME") ?? "Qwen3.8-27B-64k:latest";
+
+            var client = new OllamaApiClient(new Uri(endpoint), modelName);
+
+            var agent = client.AsAIAgent(
+                name: "BookAssistantAgent",
+                description: "وكيل ذكي مخصص للإجابة عن أسئلة محتوى الكتاب والملفات المرفوعة بدقة.",
+                instructions:
+                    """
+                    أنت مساعد وخبير ذكي في محتوى الكتاب المرفوع.
+                    مهمتك الإجابة على أسئلة واستفسارات المستخدم بناءً على محتوى الكتاب فقط.
+
+                    القواعد:
+                    1. استخدم دائماً أداة SearchBookAsync للبحث في محتوى الكتاب قبل أن تجيب.
+                    2. لا تخترع أي معلومات غير موجودة في نتائج البحث.
+                    3. اذكر رقم الصفحة إن وجد في نتيجة البحث لتوثيق الإجابة.
+                    4. أجب بنفس لغة سؤال المستخدم (عربي أو إنجليزي).
+                    """,
+                tools:
+                [
+                    AIFunctionFactory.Create(bookTools.SearchBookAsync)
+                ]);
+
+            return agent;
+        }
+    }
+}
+"@ | Set-Content "Northwind.Infrastructure\AI\Agents\Ollama\OllamaAgentFactory.cs" -Encoding UTF8
+# 3. تحديث ملف DependencyInjection.cs لتسجيل BookTools
+@"
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.AI;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Northwind.Application.AI.Agents;
+using Northwind.Application.Data;
+using Northwind.Domain.Orders;
+using Northwind.Infrastructure.AI.Agents.Ollama;
+using Northwind.Infrastructure.AI.Tools;
+using Northwind.Infrastructure.Data;
+using Northwind.Infrastructure.Orders;
+
+namespace Northwind.Infrastructure
+{
+    public static class DependencyInjection
+    {
+        public static IServiceCollection AddInfrastructure(
+            this IServiceCollection services,
+            IConfiguration configuration)
+        {
+            services.AddDbContext<NorthwindDbContext>(options =>
+                options.UseSqlServer(
+                    configuration.GetConnectionString("Northwind")));
+
+            services.AddScoped<IApplicationDbContext>(
+                provider =>
+                    provider.GetRequiredService<NorthwindDbContext>());
+
+            services.AddScoped<IOrderRepository, OrderRepository>();
+
+            services.AddScoped<OrderTools>();
+            services.AddScoped<BookTools>();
+
+            services.AddScoped<OllamaAgentFactory>();
+            services.AddScoped<ICustomerSupportAgent, OllamaCustomerSupportAgent>();
+
+            return services;
+        }
+    }
+}
+"@ | Set-Content "Northwind.Infrastructure\DependencyInjection.cs" -Encoding UTF8
+# 4. بناء المشروع للتأكد من خلوه من أي أخطاء
+$env:DOTNET_ROLL_FORWARD="Major"
+dotnet build
+dotnet run --project Northwind.Api
+pip install
+pip list
+history
+PS C:\Users\Aytto\OneDrive\Desktop\AI_Agents_In_CSharp_Dotnet\AI_Agents_In_CSharp_Dotnet> (Get-History).CommandLine
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\Aytto> Invoke-RestMethod -Method Post -Uri "http://localhost:5159/api/support/ask?message=ما هي النقاط الرئيسية المذكورة في الكتاب؟"
+بناءً على محتوى الكتاب، إليك النقاط الرئيسية:
+
+## قصة "رحلة سامر إلى القرية القديمة" (Samer's Journey to the Old Village)
+
+**1. خلفية القصة:**
+- سامر يعيش في مدينة كبيرة، لكنه يحب الاستماع إلى قصص جدّه عن القرية التي وُلد فيها.
+- القرية تقع بين جبلين، قرب جدول صغير يُعرف بـ"نهر الصفصاف" (Willow River).
+- القرية كانت في السابق مركزًا تجاريًا مهمًا يتوقف فيه المسافرون قبل عبور الجبال.
+
+**2. بداية الرحلة:**
+- في يوم صيفي، قرر سامر زيارة القرية بنفسه.
+- وصل إلى بلدة صغيرة بعد ثلاث ساعات بال버스، حيث التقى بالرجل المسن **حسن**، الذي عاش في المنطقة طوال حياته.
+
+**3. تحديات الطريق:**
+- حذّره حسن من استخدام الطريق الرئيسي لأن الجسر الخشبي فوق نهر الصفصاف تضرر بسبب الأمطار الغزيرة.
+- اقترح حسن طريقًا أطول يمر عبر الغابة ثم يصعد التلة التي تطل على القرية.
+- واجه سامر شجرة كبيرة ساقطة تعترض الطريق، فوجد مسارًا قديمًا كان يستخدمه الرعاة للوصول إلى التلة.
+
+**4. الوصول إلى القرية:**
+- وصل سامر إلى قمة التلة قبل الغروب، حيث رأى القرية والنهر والجسر الخشبي المتضرر.
+- التقى بامرأة اسمها **ليلى** تعمل في المكتبة القديمة.
+
+**5. المكتبة والتاريخ:**
+- المكتبة تحتفظ بسجلات تعود لأكثر من قرن من الزمان.
+- اكتشف سامر قصة فيضان هائل وقع قبل سبعين عامًا، دمّر جزءًا من السوق القديم، لكن المكتبة بقيت سليمة لأنها بُنيت على أرض مرتفعة.
+- وجد أيضًا خريطة قديمة تُظهر أن النهر كان أوسع بكثير مما هو عليه اليوم.
+
+**6. العودة:**
+- في الصباح التالي، قرر سامر العودة إلى المدينة، مفضلاً إعادة نفس المسار الذي سلكه.
+- أعطته ليلى نسخة من الخريطة القديمة، وطلبت منه إعادتها إلى المكتبة إذا قرر نشر قصة عن القرية.
+- التقى بحسن مرة أخرى وأخبره عن الشجرة الساقطة في الغابة.
+
+---
+*المصدر: الصفحة 1 من الكتاب.*
+PS C:\Users\Aytto> (Get-History).CommandLine
+Invoke-RestMethod -Method Post -Uri "http://localhost:5159/api/support/ask?message=ما هي النقاط الرئيسية المذكورة في الكتاب؟"
+PS C:\Users\Aytto>
+
+
+
+
+
+
+

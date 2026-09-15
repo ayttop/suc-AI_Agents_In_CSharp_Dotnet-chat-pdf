@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Northwind.Api/Northwind.Api.csproj" />
+  <Project Path="Northwind.Application/Northwind.Application.csproj" />
+  <Project Path="Northwind.Domain/Northwind.Domain.csproj" />
+  <Project Path="Northwind.Infrastructure/Northwind.Infrastructure.csproj" />
+</Solution>
